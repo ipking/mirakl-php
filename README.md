@@ -1,2 +1,3 @@
-# darty-php
-darty php sdk
+# darty php sdk
+
+https://drt-prod.mirakl.net/help/api-doc/seller/mmp.html
