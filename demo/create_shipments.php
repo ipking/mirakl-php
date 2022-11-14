@@ -4,7 +4,7 @@
 
 include '.config.php';
 
-$api = new \Darty\Api\Shipments();
+$api = new \Mirakl\Api\Shipments();
 $api->setApiKey($options['api_key']);
 $api->setShopId($options['shop_id']);
 $api->setEndpoint($options['endpoint']);

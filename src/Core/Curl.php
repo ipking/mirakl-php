@@ -1,6 +1,6 @@
 <?php
 
-namespace Darty\Core;
+namespace Mirakl\Core;
 
 
 abstract class Curl{

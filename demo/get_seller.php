@@ -2,7 +2,7 @@
 
 include '.config.php';
 
-$api = new \Darty\Api\Account();
+$api = new \Mirakl\Api\Account();
 $api->setApiKey($options['api_key']);
 $api->setShopId($options['shop_id']);
 $api->setEndpoint($options['endpoint']);

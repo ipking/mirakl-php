@@ -1,5 +1,5 @@
 <?php
-namespace Darty\Core;
+namespace Mirakl\Core;
 
 class HttpException extends \Exception{
 

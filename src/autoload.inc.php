@@ -1,5 +1,5 @@
 <?php
-namespace Darty;
+namespace Mirakl;
 
 if ( strnatcasecmp(PHP_VERSION, '5.5') < 0 ) {
 	exit('PHP version must be newer then 5.5');

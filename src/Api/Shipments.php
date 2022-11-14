@@ -1,8 +1,8 @@
 <?php
 
-namespace Darty\Api;
+namespace Mirakl\Api;
 
-use Darty\Core\Client;
+use Mirakl\Core\Client;
 
 class Shipments extends Client {
 

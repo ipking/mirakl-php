@@ -5,7 +5,7 @@
 include '.config.php';
 
 
-$api = new \Darty\Api\SellerPayment();
+$api = new \Mirakl\Api\SellerPayment();
 $api->setApiKey($options['api_key']);
 $api->setShopId($options['shop_id']);
 $api->setEndpoint($options['endpoint']);
