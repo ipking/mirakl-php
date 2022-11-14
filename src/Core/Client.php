@@ -4,7 +4,6 @@ namespace Darty\Core;
 
 abstract class Client{
 	
-	const URI_API = 'https://drt-prod.mirakl.net';
 	
 	const METHOD_GET = 'GET';
 	const METHOD_POST = 'POST';
@@ -15,6 +14,8 @@ abstract class Client{
 	protected static $callback;
 	
 	protected $method;
+	
+	protected $endpoint;
 	
 	protected $url;
 	
@@ -55,6 +56,13 @@ abstract class Client{
 		return $this->client_response;
 	}
 	
+	/**
+	 * @param string $endpoint 请求接入点域名(xx.[https://drt-prod.mirakl.net)
+	 */
+	public function setEndpoint($endpoint)
+	{
+		$this->endpoint = $endpoint;
+	}
 	
 	/**
 	 * @param string $api_key
@@ -78,7 +86,7 @@ abstract class Client{
 	 */
 	protected function send($uri, $requestOptions = []){
 		$this->method = strtoupper($requestOptions['method']);
-		$this->url = self::URI_API.$uri;
+		$this->url = $this->endpoint.$uri;
 		
 		if($this->shop_id){
 			$requestOptions['query']['shop_id'] = $this->shop_id;

@@ -8,6 +8,7 @@ include '.config.php';
 $api = new \Darty\Api\SellerPayment();
 $api->setApiKey($options['api_key']);
 $api->setShopId($options['shop_id']);
+$api->setEndpoint($options['endpoint']);
 
 $page_token = '';
 while(1){

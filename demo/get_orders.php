@@ -7,6 +7,7 @@ include '.config.php';
 $api = new \Darty\Api\Orders();
 $api->setApiKey($options['api_key']);
 $api->setShopId($options['shop_id']);
+$api->setEndpoint($options['endpoint']);
 
 $offset = 0;
 $max = 20;
