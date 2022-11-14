@@ -1,9 +1,9 @@
 {
-    "name": "ipking/darty-php",
-    "description": "darty PHP API.",
+    "name": "ipking/mirakl-php",
+    "description": "mirakl PHP API.",
     "type": "library",
     "license": "Apache-2.0",
-	"homepage": "https://github.com/ipking/darty-php",
+	"homepage": "https://github.com/ipking/mirakl-php",
     "authors": [{
         "name": "ipking",
         "email": "667997@gmail.com"
