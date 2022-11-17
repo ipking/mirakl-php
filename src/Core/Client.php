@@ -19,6 +19,8 @@ abstract class Client{
 	
 	protected $url;
 	
+	protected $data;
+	
 	protected $client_response;
 	
 	protected $response_code;
@@ -47,6 +49,13 @@ abstract class Client{
 	 */
 	public function getUrl(){
 		return $this->url;
+	}
+	
+	/**
+	 * @return string
+	 */
+	public function getData(){
+		return $this->data;
 	}
 	
 	/**
@@ -119,6 +128,7 @@ abstract class Client{
 					CURLOPT_HTTPHEADER     => $header_arr,
 					CURLOPT_POSTFIELDS     => $data,
 				);
+				$this->data = json_encode($requestOptions['json']);
 				return $this->execute($this->url,$opt);
 			case self::METHOD_PUT:
 				$data = [];
@@ -131,6 +141,7 @@ abstract class Client{
 					CURLOPT_HTTPHEADER     => $header_arr,
 					CURLOPT_POSTFIELDS     => $data,
 				);
+				$this->data = json_encode($requestOptions['json']);
 				return $this->execute($this->url,$opt);
 			default :
 				throw new \Exception('Not support method :'.$this->method);
